@@ -10,51 +10,26 @@
 
 	-->
   <q-page padding>
-  	<div class="q-pa-md row items-stretch">
+  	<div
+	  class="q-pa-md row items-stretch">
 
-  	  <div class="card shadow-1">
-  	  	<img src="https://i.imgur.com/0umadnY.jpg" width="198" height="180">
+  	  <div
+		v-for="( food, id ) in foods"
+	  	:key="id"
+		:food="food"
+		class="card shadow-1">
+  	  	<img
+			:src="food.url"
+			width="198" height="180">
   	  	<div class="card-content">
-  	  		<h1 class="text-primary">Burger</h1>
-  	  		<p>A burger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. </p>
+  	  		<h1 class="text-primary">{{ food.name }}</h1>
+  	  		<p> {{ food.desc }} </p>
   	  		<p>
 	  	  		<small>
 	  	  			<b>Delicousness:</b>
 	  	  		</small>
 	  	  		<b class="text-primary">
-		  	  		4/5
-	  	  		</b>
-  	  		</p>
-  	  	</div>
-  	  </div>
-  	  <div class="card shadow-1">
-  	  	<img src="https://i.imgur.com/b9zDbyb.jpg"
-  	  	 width="198" height="180">
-  	  	<div class="card-content">
-  	  		<h1 class="text-primary">Pizza</h1>
-  	  		<p>Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.</p>
-  	  		<p>
-	  	  		<small>
-	  	  			<b>Delicousness:</b>
-	  	  		</small>
-	  	  		<b class="text-primary">
-		  	  		5/5
-	  	  		</b>
-  	  		</p>
-  	  	</div>
-  	  </div>
-  	  <div class="card shadow-1">
-  	  	<img src="https://i.imgur.com/RbKjUjB.jpg"
-  	  	 width="198" height="180">
-  	  	<div class="card-content">
-  	  		<h1 class="text-primary">Sprouts</h1>
-  	  		<p>The Brussels sprout is a member of the Gemmifera Group of cabbages, grown for its edible buds.</p>
-  	  		<p>
-	  	  		<small>
-	  	  			<b>Delicousness:</b>
-	  	  		</small>
-	  	  		<b class="text-primary">
-		  	  		1/5
+		  	  		{{ food.delish }}
 	  	  		</b>
   	  		</p>
   	  	</div>
@@ -70,22 +45,24 @@
 			return {
 				foods: [
 					{
+						id: 1,
 						url: 'https://i.imgur.com/0umadnY.jpg',
 						name: 'Burger',
 						desc: 'A burger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.',
-						delic: '4/5'
+						delish: '4/5'
 					},
 					{
+						id: 2,
 						url: 'https://i.imgur.com/b9zDbyb.jpg',
 						name: 'Pizza',
 						desc: 'Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.',
-						delic: '5/5'
+						delish: '5/5'
 					},
-					{
+					{	id: 3,
 						url: 'https://i.imgur.com/RbKjUjB.jpg',
 						name: 'Sprouts',
 						desc: 'The Brussels sprout is a member of the Gemmifera Group of cabbages, grown for its edible buds.',
-						delic: '1/5'
+						delish: '1/5'
 					}
 				]
 			}
