@@ -69,7 +69,24 @@
 		data() {
 			return {
 				foods: [
-					// food objects go here
+					{
+						url: 'https://i.imgur.com/0umadnY.jpg',
+						name: 'Burger',
+						desc: 'A burger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.',
+						delic: '4/5'
+					},
+					{
+						url: 'https://i.imgur.com/b9zDbyb.jpg',
+						name: 'Pizza',
+						desc: 'Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.',
+						delic: '5/5'
+					},
+					{
+						url: 'https://i.imgur.com/RbKjUjB.jpg',
+						name: 'Sprouts',
+						desc: 'The Brussels sprout is a member of the Gemmifera Group of cabbages, grown for its edible buds.',
+						delic: '1/5'
+					}
 				]
 			}
 		}
