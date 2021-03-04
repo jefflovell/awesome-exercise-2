@@ -13,27 +13,11 @@
   	<div
 	  class="q-pa-md row items-stretch">
 
-  	  <div
+  	  <food
 		v-for="( food, id ) in foods"
 	  	:key="id"
-		:food="food"
-		class="card shadow-1">
-  	  	<img
-			:src="food.url"
-			width="198" height="180">
-  	  	<div class="card-content">
-  	  		<h1 class="text-primary">{{ food.name }}</h1>
-  	  		<p> {{ food.desc }} </p>
-  	  		<p>
-	  	  		<small>
-	  	  			<b>Delicousness:</b>
-	  	  		</small>
-	  	  		<b class="text-primary">
-		  	  		{{ food.delish }}
-	  	  		</b>
-  	  		</p>
-  	  	</div>
-  	  </div>
+		:food="food">
+  	  </food>
   	  
   	</div>
   </q-page>
@@ -72,6 +56,9 @@
 					}
 				]
 			}
+		},
+		components: {
+			'food' : require('components/Food.vue').default
 		}
 	}
 </script>
